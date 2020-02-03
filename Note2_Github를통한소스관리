@@ -1,0 +1,17 @@
+[ Github를 통한 소스관리 설정 ]
+
+	1. gitignore 파일 생성
+		- 불필요한 업로드 경로 설정
+		- node_modules, build 폴더 제외
+
+	2. Github > Repositories 생성
+		- url : https://github.com/devvjep/WordCloud.git
+
+	3. git 설치
+		https://git-scm.com/download/win
+
+	4.  git 초기화
+		D:\02_project\nodejs\workspace\MyReactTutorial> git init
+
+
+		
