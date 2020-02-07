@@ -1,0 +1,16 @@
+[ 네비게이션 바 생성 ]
+
+    1. UI 관련 프레임워크 설치
+        D:\02_project\nodejs\workspace\MyReactTutorial> yarn add @material-ui/core
+        D:\02_project\nodejs\workspace\MyReactTutorial> yarn add @material-ui/icons
+
+        * Material UI : 리액트 디자인 관련 프레임워크
+
+    2. AppShell.js 구현
+        - 일반적으로 AppShell로 구현
+    
+    3. App.js에서 AppShell.js import
+        import AppShell from './AppShell';
+
+    4. 서버 실행
+        D:\02_project\nodejs\workspace\MyReactTutorial> yarn start

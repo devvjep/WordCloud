@@ -17,7 +17,7 @@
 	1. react 개발 진행 시 프로젝트 초기화
 		D:\02_project\nodejs\workspace\MyReactTutorial> yarn init
 
-		*	패키지명 필수 입력
+		* 패키지명 필수 입력
 		yarn init v1.21.1
 		question name (MyReactTutorial): wordcloud
 
