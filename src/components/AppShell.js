@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link as RouterLink } from 'react-router-dom' // material-ui에도 중복명이 존재하므로, 충돌방지를 위해 alias 추가
+import Link from '@material-ui/core/Link';
 import { withStyles } from '@material-ui/core/styles'; // 디자인 관련
 import AppBar from '@material-ui/core/AppBar'; // 네비게이션바 관련
 import Drawer from '@material-ui/core/Drawer'; // 네비게이션바 그리는 것 관련
@@ -39,16 +41,34 @@ class AppShell extends Component {
     render() {
         const { classes } = this.props; // 사용자용 스타일 적용 목적
         return (
-            <div className={classes.root}>
-                <AppBar position="static">
-                    <IconButton className={classes.menuButton} color="inherit" onClick={this.handleDrawerToggle}>
-                        <MenuIcon/>
-                    </IconButton>
-                </AppBar>
-                <Drawer open={this.state.toggle}>
-                    <MenuItem onClick={this.handleDrawerToggle}>Home</MenuItem>
-                    <MenuItem onClick={this.handleDrawerToggle}>Home2</MenuItem>
-                </Drawer>
+            <div>
+                <div className={classes.root}>
+                    <AppBar position="static">
+                        <IconButton className={classes.menuButton} color="inherit" onClick={this.handleDrawerToggle}>
+                            <MenuIcon/>
+                        </IconButton>
+                    </AppBar>
+                    <Drawer open={this.state.toggle}>
+                        <MenuItem onClick={this.handleDrawerToggle}>
+                            <Link component={RouterLink} to="/">
+                                Home
+                            </Link>
+                        </MenuItem>
+                        <MenuItem onClick={this.handleDrawerToggle}>
+                            <Link component={RouterLink} to="/texts">
+                                Tests
+                            </Link>
+                        </MenuItem>
+                        <MenuItem onClick={this.handleDrawerToggle}>
+                            <Link component={RouterLink} to="/words">
+                                Words
+                            </Link>
+                        </MenuItem>
+                    </Drawer>
+                </div>
+                <div id="content" style={{margin:'auto', marginTop:'20px'}}>
+                    {React.cloneElement(this.props.children)}
+                </div>
             </div>
         );
     }
