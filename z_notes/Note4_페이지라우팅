@@ -22,4 +22,6 @@
     6. AppShell.js > MenuItem 추가
 
     7. git에 반영
-        D:\02_project\nodejs\workspace\MyReactTutorial>
+        D:\02_project\nodejs\workspace\MyReactTutorial>git add .
+        D:\02_project\nodejs\workspace\MyReactTutorial>git commit -m "Add Router Module"
+        D:\02_project\nodejs\workspace\MyReactTutorial>git push

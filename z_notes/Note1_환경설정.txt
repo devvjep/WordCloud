@@ -44,11 +44,11 @@
 	6. public 폴더 생성 
 		- 클라이언트 화면 폴더
 
-	7. index.html  생성
+	7. index.html 생성 > 초기 화면용
 
-	8. main.js 생성
+	8. main.js 생성 > 실제 index.html에서 내부적으로 사용할 App.js를 구동할 역할
 
-	9. app.js 생성
+	9. App.js 생성 > 실질적 화면의 최외곽 역할
 
 	10. webpack 설정
 		- webpack.config.js 생성

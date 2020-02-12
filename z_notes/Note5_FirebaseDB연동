@@ -1,0 +1,29 @@
+[ FirebaseDB 구축 및 React 와의 연동 ]
+
+    * FirebaseDB
+        - 호스팅, DB, 서버API(웹서버) 기능 등 제공
+        - 웹서버와 데이터베이스 통합형(서버 전체 기능 제공)
+
+    1. Firebase 프로젝트 생성
+        https://word-cloud-45740.firebaseio.com/words.json
+
+    2. Realtime Database 테스트용으로 생성 
+        - 테스트용은 개발할 때 데이터를 임의로 변경하기 쉬움(외부에서 쉽게 접속 가능)
+    
+    3. 테스트 데이터 생성
+        - word-cloud-45740 > words > 0 > word : 사랑 / weight : 5
+        - word-cloud-45740 > words > 1 > word : 영혼 / weight : 3
+        - word-cloud-45740 > words > 2 > word : 기적 / weight : 7
+
+    4. 테스트 데이터 json 형태로 확인
+        - https://word-cloud-45740.firebaseio.com/words.json
+        - firebase는 기본적으로 json 형식을 따름
+    
+    5. Words.js > DB 연동
+        - Typography 임포트
+        - Words 컴포넌트의 생성자 구현
+        - shouldComponentUpdate() 함수 구현 : words가 변경 시에만 컴포넌트가 갱신하게 하는 react 제공 함수
+        - componentDidMount 함수 구현 : UI 컴포넌트가 모두 구성이 된 이후에 API를 불러오도록 하는 react 제공 함수
+        - _get() 함수 구현 : 해당 db에서 데이터를 json을 가져와서 words 변수에 담아주는 형태
+        - map을 통해 해당 데이터 출력
+        - key 속성 설정 필요
